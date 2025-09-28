@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional, Union
 import datetime
 from fastmcp import FastMCP
+import os
 
 # Kafka imports
 from kafka.admin import KafkaAdminClient, ConfigResource, ConfigResourceType, NewTopic
@@ -907,8 +908,9 @@ def send_email_notification(recipient_email: str, content: str, subject: str = "
         smtp_port = 587
         
         # Email credentials or get from env
-        sender_email = 'mail'
-        sender_password = 'pp'
+        sender_email = os.getenv('KAFKAIQ_GMAIL_USER', 'DEFAULT_EMAIL')
+        sender_password = os.getenv('KAFKAIQ_GMAIL_PASSWORD', 'DEFAULT_PASSWORD')
+
         
         # Create email message
         message = MIMEMultipart()
