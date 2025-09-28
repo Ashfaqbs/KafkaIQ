@@ -1,5 +1,7 @@
 # KafkaIQ 🧠⚡
 
+![alt text](assets/image.png)
+
 **AI-Powered Kafka Management via Model Control Protocol (MCP)**
 
 KafkaIQ is an intelligent Kafka management tool that exposes Apache Kafka operations through the Model Control Protocol (MCP), enabling AI assistants to seamlessly interact with and manage Kafka clusters through natural language commands.
